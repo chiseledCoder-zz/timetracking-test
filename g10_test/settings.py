@@ -142,6 +142,16 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static_src", "static_root")
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "static_src", "media_root")
+
+STATICFILES_DIRS = (
+                        os.path.join(BASE_DIR, "static_src", "our_static"),
+                    )
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
